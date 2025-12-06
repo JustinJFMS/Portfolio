@@ -1,0 +1,162 @@
+/* css/style.css */
+@import url('./variables.css');
+
+/* --- RESET & BASE --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Renderizado nítido en Mac */
+}
+
+a { text-decoration: none; color: inherit; transition: opacity var(--transition-fast); }
+a:hover { opacity: 0.8; }
+ul { list-style: none; }
+
+/* --- LAYOUT UTILITY --- */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.typewriter-text::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blinkCursor 0.8s steps(2, start) infinite;
+}
+
+@keyframes blinkCursor {
+    to {
+        visibility: hidden;
+    }
+}
+
+.section { margin-bottom: var(--spacing-xl); }
+
+/* --- TYPOGRAPHY --- */
+h1, h2, h3 { font-family: var(--font-mono); font-weight: 600; letter-spacing: -0.5px; }
+
+h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: var(--spacing-lg); 
+    border-left: 3px solid var(--accent-color); 
+    padding-left: var(--spacing-md);
+}
+
+.role { color: var(--accent-color); font-family: var(--font-mono); margin-bottom: var(--spacing-md); display: block; }
+p { color: var(--text-secondary); margin-bottom: var(--spacing-md); max-width: 65ch; }
+
+/* --- COMPONENT: BUTTONS --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    font-weight: 700;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+/* --- COMPONENT: SKILLS GRID --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.skill-item {
+    background: var(--surface-color);
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+.skill-item strong { display: block; color: var(--text-primary); margin-bottom: 4px; }
+
+/* --- COMPONENT: PROJECT CARD --- */
+.project-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    margin-bottom: 48px;
+    border: 1px solid var(--border-color);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-stack { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-color); }
+
+/* --- CODE SNIPPETS (VS Code Style) --- */
+.code-snippet {
+    background: var(--code-bg);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #d4d4d4;
+    overflow-x: auto;
+    margin: 24px 0;
+    border-left: 2px solid var(--accent-color);
+}
+
+.code-comment { color: var(--syntax-comment); }
+.code-keyword { color: var(--syntax-keyword); }
+.code-string { color: var(--syntax-string); }
+
+.link-item { 
+    font-family: var(--font-mono); 
+    font-size: 0.85rem; 
+    margin-right: 24px; 
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    padding: 48px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    .hero { padding-top: 60px; }
+    .project-header { flex-direction: column; gap: 8px; }
+}

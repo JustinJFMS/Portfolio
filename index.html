@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Justin Moreno - Backend Developer. Java, SQL, Arquitectura.">
+    <title>Justin Moreno | Backend Developer</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        
+        <section class="section hero" style="padding-top: 120px;">
+            <span class="role">Backend Developer Junior</span>
+            <h1 class="typewriter-text">Hola, soy Justin Moreno.</h1>
+            <p>
+                Desarrollador de software en Cúcuta, Colombia 🇨🇴. 
+                Especializado en <strong>arquitecturas escalables</strong> y código limpio.
+                Transformo lógica compleja en soluciones eficientes.
+            </p>
+            
+            <div class="hero-actions" style="margin-top: 32px; display: flex; gap: 16px;">
+                <button id="emailBtn" class="btn btn-primary" data-email="justinmorenosoto@gmail.com">
+                    Copiar Email
+                </button>
+                <a href="https://github.com/JustinJFMS" target="_blank" class="btn">GitHub</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Stack Tecnológico</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><strong>Java 17+</strong>Core & OOP</div>
+                <div class="skill-item"><strong>SQL Avanzado</strong>MySQL</div>
+                <div class="skill-item"><strong>Arquitectura</strong>MVC + DAO</div>
+                <div class="skill-item"><strong>Git/GitHub</strong>Flow & Versioning</div>
+                <div class="skill-item"><strong>Linux</strong>Terminal & Bash</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Ingeniería & Proyectos</h2>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">E-commerce Database Core</h3>
+                    <span class="tech-stack">SQL / TRIGGERS / PROCEDURES</span>
+                </div>
+                <p>
+                    Arquitectura de base de datos relacional enfocada en integridad referencial y lógica de negocio automatizada mediante Triggers y Stored Procedures.
+                </p>
+                
+                <div class="code-snippet">
+                    <span class="code-comment">-- Trigger para actualización automática de inventario</span><br>
+                    <span class="code-keyword">CREATE TRIGGER</span> trg_update_stock<br>
+                    <span class="code-keyword">AFTER INSERT ON</span> order_details...
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/JustinJFMS/Proyecto_BD_Avanzada_Duban_Ashly_Justin_Public" target="_blank" class="link-item">Ver Estructura SQL →</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">RapidExpress CLI</h3>
+                    <span class="tech-stack">JAVA / MVC / DAO / SINGLETON</span>
+                </div>
+                <p>
+                    Sistema de gestión logística construido con patrones de diseño estrictos. Desacoplamiento total entre la lógica de negocio y la persistencia de datos.
+                </p>
+
+                <div class="code-snippet">
+                    <span class="code-comment">// Implementación segura del patrón DAO</span><br>
+                    <span class="code-keyword">public class</span> DriverDAO <span class="code-keyword">implements</span> IDriverDAO {<br>
+                    &nbsp;&nbsp;<span class="code-keyword">private</span> Connection conn = DatabaseConnection.getConnection();
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/JustinJFMS/rapidexpress-management-system-public" target="_blank" class="link-item">Ver Código Java →</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Justin Moreno. Construido con HTML5 Semántico y CSS3 Puro.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
